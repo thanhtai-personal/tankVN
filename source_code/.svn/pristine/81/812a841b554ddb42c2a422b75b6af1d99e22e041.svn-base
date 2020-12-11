@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="TankVN.ButtonSprite" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAIAAQBAIAEggAAAAAAEAgAAAKAgAgCAIAAIAAADA=</HashCode>
+      <FileName>HelpObject\ButtonSprite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TankVN.Force" Collapsed="true">
+    <Position X="7.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAACAAAAABEAEAAQABAAAAAAAQAAA=</HashCode>
+      <FileName>HelpObject\Force.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TankVN.GLOBAL" Collapsed="true">
+    <Position X="9.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEIAAAAAgAAAEAECCBAIAEBAQAAEAAQmIAAA0IBUAII=</HashCode>
+      <FileName>HelpObject\GLOBAL.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TankVN.MyAbstractModel" Collapsed="true">
+    <Position X="1.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIQAAAAAAAAAAgAgABAAgQAAAAAAkAECAAEAEACBAAI=</HashCode>
+      <FileName>HelpObject\MyAbstractModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TankVN.MySprite2D" Collapsed="true">
+    <Position X="2.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAABAIAAgAAAAAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>HelpObject\MySprite2D.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TankVN.TextureMultiFrame" Collapsed="true">
+    <Position X="7.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQhAAAIoQAQGAAAEAAAAAAEgAAAAAAAAAAEAA=</HashCode>
+      <FileName>HelpObject\TextureMultiFrame.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TankVN.VisibleGameEntity" Collapsed="true">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAgAAAAAAIA=</HashCode>
+      <FileName>HelpObject\VisibleGameEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TankVN.Game1" Collapsed="true">
+    <Position X="9.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAEEAAAAAAAwAAAAAAAQgAAAAAAAgAAAQAAAAAAAU=</HashCode>
+      <FileName>Main\Game1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TankVN.GameMenu" Collapsed="true">
+    <Position X="13.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAQAEAAEAAABAwAgAAAAAAAAgIAACAgAAAAAAKAAIAw=</HashCode>
+      <FileName>Main\GameMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TankVN.GamePlay" Collapsed="true">
+    <Position X="7.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAQIFAAAAAgAAwAAAAAAABAAAAAAABCCAAAAAAAAIQQ=</HashCode>
+      <FileName>Main\GamePlay.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TankVN.Program" Collapsed="true">
+    <Position X="13.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Main\Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TankVN.bullet" Collapsed="true">
+    <Position X="3" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAIAAwAgAAEAIAAAAAAAAAAAAQACAACEAgA=</HashCode>
+      <FileName>MyGameObject\bullet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TankVN.cell" Collapsed="true">
+    <Position X="9.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAIAAgAgAAAAIAAAAAABAgAAAAAACAAAEAA=</HashCode>
+      <FileName>MyGameObject\cell.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TankVN.enermy" Collapsed="true">
+    <Position X="5.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAIAAIAAAgAAAiAAABAAAAAEAABUCYCANACEAEI=</HashCode>
+      <FileName>MyGameObject\enermy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TankVN.GameButton" Collapsed="true">
+    <Position X="0.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MyGameObject\GameButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TankVN.player" Collapsed="true">
+    <Position X="7.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAggAAAAAAgAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>MyGameObject\player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TankVN.tank" Collapsed="true">
+    <Position X="6.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAghAAAAAIIAAgAgAACAAAACAAAAAAAAAAACCAAccgA=</HashCode>
+      <FileName>MyGameObject\tank.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="TankVN.GameType" Collapsed="true">
+    <Position X="9.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Main\Game1.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="TankVN.CellType" Collapsed="true">
+    <Position X="7.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAAAAEEAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>MyGameObject\cell.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

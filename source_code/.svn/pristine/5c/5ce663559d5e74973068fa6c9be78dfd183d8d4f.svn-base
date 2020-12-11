@@ -1,0 +1,446 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
+using Microsoft.Xna.Framework.Content;
+using Microsoft.Xna.Framework.GamerServices;
+using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Media;
+using Microsoft.Xna.Framework.GamerServices;
+namespace TankWar
+{
+    /// <summary>
+    /// This is the main type for your game
+    /// </summary>
+    enum GameType
+    {
+        gamenu,
+        selectmap,
+        Level1
+    }
+    public class Game1 : Microsoft.Xna.Framework.Game
+    {
+        GraphicsDeviceManager graphics;
+        SpriteBatch spriteBatch;
+        GameType gType = GameType.gamenu;
+       
+        public Game1()
+        {
+            graphics = new GraphicsDeviceManager(this);
+            Content.RootDirectory = "Content";
+            //Global.bulletSound = this.Content.Load<SoundEffect>(@"GamePlay/bulletSound");
+
+            this.graphics.PreferredBackBufferWidth = 900;
+            this.graphics.PreferredBackBufferHeight = 676;
+        }
+
+        GameMenu menu;
+        GamePlay lvl;
+        GameOver gameover;
+        SelectMapMenu _SelectMapMenu;
+        protected override void Initialize()
+        {
+            GLOBAL.nhacnenGame = this.Content.Load<Song>(@"GameMenu/NhacNenMenu");
+            #region Menu
+            #region MenuTable
+            GLOBAL.Playtexture = Content.Load<Texture2D>(@"GameMenu/btnPlay");
+            GLOBAL.Loadtexture = Content.Load<Texture2D>(@"GameMenu/btnLoad");
+            GLOBAL.Opotiontexture = Content.Load<Texture2D>(@"GameMenu/btnOpotion");
+            GLOBAL.Scoretexture = Content.Load<Texture2D>(@"GameMenu/btnScore");
+            GLOBAL.Exittexture = Content.Load<Texture2D>(@"GameMenu/btnExit");
+            GLOBAL.Menutabletexture = Content.Load<Texture2D>(@"GameMenu/MenuTable3");
+            GLOBAL.Playtexture2 = Content.Load<Texture2D>(@"GameMenu/btnPlay1");
+            GLOBAL.Loadtexture2 = Content.Load<Texture2D>(@"GameMenu/btnLoad1");
+            GLOBAL.Opotiontexture2 = Content.Load<Texture2D>(@"GameMenu/btnOpotion1");
+            GLOBAL.Scoretexture2 = Content.Load<Texture2D>(@"GameMenu/btnScore1");
+            GLOBAL.Exittexture2 = Content.Load<Texture2D>(@"GameMenu/btnExit1");
+            
+            #endregion
+            GLOBAL.sideBG = Content.Load<Texture2D>(@"GameMenu/sidebackground");
+            GLOBAL.TitleTexture = Content.Load<Texture2D>(@"GameMenu/TitleGame");
+            GLOBAL.MenuBackground = Content.Load<Texture2D>(@"GameMenu/menubackground5");
+
+            #region sound effect
+            GLOBAL.changeButtonSound = Content.Load<SoundEffect>(@"GameMenu/changeButton");
+            GLOBAL.menutableSound = Content.Load<SoundEffect>(@"GameMenu/Menutablesound3");
+            GLOBAL.enterGameSound = Content.Load<SoundEffect>(@"GameMenu/entergamesound");
+            #endregion
+
+            
+
+            #endregion
+
+            #region GamePlay
+            GLOBAL.BulletTexture = Content.Load<Texture2D>(@"GamePlay/bullet");
+            GLOBAL.Gachtexture = Content.Load<Texture2D>(@"GamePlay/TuongGach");
+            GLOBAL.walltexture = Content.Load<Texture2D>(@"GamePlay/wall");
+            GLOBAL.bgtexture = Content.Load<Texture2D>(@"GamePlay/bg");
+            GLOBAL.ProtectTexture = Content.Load<Texture2D>(@"GamePlay/protect");
+            GLOBAL.buicaytexture = Content.Load<Texture2D>(@"GamePlay/buicay");
+            GLOBAL.waterTt = Content.Load<Texture2D>(@"GamePlay/water");
+         
+          
+            GLOBAL.font = Content.Load<SpriteFont>("sprf");
+            GLOBAL.font2 = Content.Load<SpriteFont>("font2");
+            GLOBAL.tankEnermy1Tt = Content.Load<Texture2D>(@"GamePlay/tank1");
+            GLOBAL.tankEnermy2Tt = Content.Load<Texture2D>(@"GamePlay/tank2");
+            GLOBAL.tankEnermy3Tt = Content.Load<Texture2D>(@"GamePlay/tank3");
+            GLOBAL.tankEnermy4Tt = Content.Load<Texture2D>(@"GamePlay/tank4");
+            GLOBAL.tankPlayerTt = Content.Load<Texture2D>(@"GamePlay/tank0");
+            GLOBAL.GameOverBG = Content.Load<Texture2D>(@"GameMenu/GameOverBG");
+            GLOBAL.explosionGachTt = Content.Load<Texture2D>(@"GamePlay/ExplosionGach");
+            GLOBAL.explosionTankTt = Content.Load<Texture2D>(@"GamePlay/ExplosionTank");
+            GLOBAL.explosionBulletTt = Content.Load<Texture2D>(@"GamePlay/vachamBullet");
+            GLOBAL.FireTt = Content.Load<Texture2D>(@"GamePlay/fire");
+           
+            GLOBAL.EnermyHasItemTt = Content.Load<Texture2D>(@"GamePlay/EnermyHasItemEf");
+            GLOBAL.KillAllItemTt = Content.Load<Texture2D>(@"GamePlay/KillAllItem");
+            GLOBAL.KillAllEfTt = Content.Load<Texture2D>(@"GamePlay/KillAllEf");
+            GLOBAL.ItemEf = Content.Load<Texture2D>(@"GamePlay/ItemEf");
+            GLOBAL.FreezeTimeItemTt = Content.Load<Texture2D>(@"GamePlay/FreezeTimeItem");
+            GLOBAL.FreezeEffectGamezoneTt = Content.Load<Texture2D>(@"GamePlay/FreezeEffectGameZone");
+            GLOBAL.ShieldItemTt = Content.Load<Texture2D>(@"GamePlay/ShieldItem");
+            GLOBAL.ShieldItemEfTt = Content.Load<Texture2D>(@"GamePlay/ShieldItemEf");
+            GLOBAL.HeartItemTt = Content.Load<Texture2D>(@"GamePlay/HeartItem");
+            GLOBAL.HeartItemEfTt = Content.Load<Texture2D>(@"GamePlay/HeartItemEf");
+            GLOBAL.SpeedItemTt = Content.Load<Texture2D>(@"GamePlay/SpeedItem");
+            GLOBAL.SpeedItemEfTt = Content.Load<Texture2D>(@"GamePlay/SpeedItemEf");
+            GLOBAL.UpdateItemTt = Content.Load<Texture2D>(@"GamePlay/UpdateItem");
+            GLOBAL.HouseItemTt = Content.Load<Texture2D>(@"GamePlay/HouseItem");
+            GLOBAL.HouseItemEfTt = Content.Load<Texture2D>(@"GamePlay/HouseItemEf");
+            GLOBAL.TeleportItemTt = Content.Load<Texture2D>(@"GamePlay/TeleportItem");
+            GLOBAL.TeleportItemEfTt = Content.Load<Texture2D>(@"GamePlay/TeleportItemEf");
+            
+            #endregion
+#region MapResource
+            GLOBAL.MapTxt = new List<List<string>>();
+            GLOBAL.MapTxt.Add(new List<string>(0));
+            GLOBAL.MapTxt[0].Add("10");
+            GLOBAL.MapTxt[0].Add("6");
+            GLOBAL.MapTxt[0].Add("2");
+            GLOBAL.MapTxt[0].Add("2");
+            GLOBAL.MapTxt[0].Add("1,1,1,1,1,1,3,3,1,1,1,1,1,1,3,3,1,1,1,1,1,1,1,1,1,1,");
+            GLOBAL.MapTxt[0].Add("1,1,1,1,1,1,3,3,1,1,1,1,1,1,3,3,1,1,1,1,1,1,1,1,1,1,");
+            GLOBAL.MapTxt[0].Add("1,1,2,2,1,1,3,3,1,1,1,1,1,1,2,2,1,1,2,2,1,1,2,2,1,1,");
+            GLOBAL.MapTxt[0].Add("1,1,2,2,1,1,3,3,1,1,1,1,1,1,2,2,1,1,2,2,1,1,2,2,1,1,");
+            GLOBAL.MapTxt[0].Add("1,1,2,2,1,1,1,1,1,1,1,1,2,2,2,2,1,1,2,2,3,3,2,2,1,1,");
+            GLOBAL.MapTxt[0].Add("1,1,2,2,1,1,1,1,1,1,1,1,2,2,2,2,1,1,2,2,3,3,2,2,1,1,");
+            GLOBAL.MapTxt[0].Add("1,1,1,1,1,1,2,2,1,1,1,1,1,1,1,1,1,1,3,3,1,1,1,1,1,1,");
+            GLOBAL.MapTxt[0].Add("1,1,1,1,1,1,2,2,1,1,1,1,1,1,1,1,1,1,3,3,1,1,1,1,1,1,");
+            GLOBAL.MapTxt[0].Add("5,5,1,1,1,1,2,2,1,1,1,1,3,3,1,1,1,1,2,2,5,5,2,2,3,3,");
+            GLOBAL.MapTxt[0].Add("5,5,1,1,1,1,2,2,1,1,1,1,3,3,1,1,1,1,2,2,5,5,2,2,3,3,");
+            GLOBAL.MapTxt[0].Add("5,5,5,5,1,1,1,1,1,1,2,2,1,1,1,1,3,3,1,1,5,5,1,1,1,1,");
+            GLOBAL.MapTxt[0].Add("5,5,5,5,1,1,1,1,1,1,2,2,1,1,1,1,3,3,1,1,5,5,1,1,1,1,");
+            GLOBAL.MapTxt[0].Add("1,1,1,1,1,1,1,1,5,5,5,5,5,5,3,3,1,1,1,1,5,5,2,2,1,1,");
+            GLOBAL.MapTxt[0].Add("1,1,1,1,1,1,1,1,5,5,5,5,5,5,3,3,1,1,1,1,5,5,2,2,1,1,");
+            GLOBAL.MapTxt[0].Add("1,1,1,1,1,1,3,3,5,5,2,2,1,1,2,2,1,1,2,2,1,1,2,2,1,1,");
+            GLOBAL.MapTxt[0].Add("1,1,1,1,1,1,3,3,5,5,2,2,1,1,2,2,1,1,2,2,1,1,2,2,1,1,");
+            GLOBAL.MapTxt[0].Add("3,3,2,2,1,1,3,3,1,1,2,2,1,1,2,2,1,1,1,1,1,1,2,2,1,1,");
+            GLOBAL.MapTxt[0].Add("3,3,2,2,1,1,3,3,1,1,2,2,1,1,2,2,1,1,1,1,1,1,2,2,1,1,");
+            GLOBAL.MapTxt[0].Add("1,1,2,2,1,1,2,2,1,1,2,2,2,2,2,2,1,1,2,2,3,3,2,2,1,1,");
+            GLOBAL.MapTxt[0].Add("1,1,2,2,1,1,2,2,1,1,2,2,2,2,2,2,1,1,2,2,3,3,2,2,1,1,");
+            GLOBAL.MapTxt[0].Add("1,1,2,2,1,1,2,2,1,1,2,2,2,2,2,2,1,1,1,1,1,1,1,1,1,1,");
+            GLOBAL.MapTxt[0].Add("1,1,2,2,1,1,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,");
+            GLOBAL.MapTxt[0].Add("1,1,2,2,1,1,1,1,1,1,2,2,2,2,2,2,1,1,2,2,1,1,2,2,1,1,");
+            GLOBAL.MapTxt[0].Add("1,1,2,2,1,1,1,1,1,1,2,2,2,2,2,2,1,1,2,2,1,1,2,2,1,1,");
+            GLOBAL.MapTxt[0].Add("1,1,2,2,1,1,2,2,1,1,2,2,1,1,2,2,1,1,2,2,2,2,2,2,1,1,");
+            GLOBAL.MapTxt[0].Add("1,1,2,2,1,1,2,2,1,1,2,2,1,1,2,2,1,1,2,2,2,2,2,2,1,1");
+            ////////////map 2
+            GLOBAL.MapTxt.Add(new List<string>(0));
+            GLOBAL.MapTxt[1].Add("10");
+            GLOBAL.MapTxt[1].Add("6");
+            GLOBAL.MapTxt[1].Add("2");
+            GLOBAL.MapTxt[1].Add("2");
+            GLOBAL.MapTxt[1].Add("1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,");
+            GLOBAL.MapTxt[1].Add("1,1,3,3,3,3,3,1,1,1,1,2,2,2,2,1,1,1,1,3,3,3,3,3,1,1,");
+            GLOBAL.MapTxt[1].Add("1,1,3,3,3,3,3,1,1,1,1,2,2,2,2,1,1,1,1,3,3,3,3,3,1,1,");
+            GLOBAL.MapTxt[1].Add("5,5,5,1,1,1,2,2,2,2,2,1,1,1,1,2,2,2,2,2,1,1,1,5,5,5,");
+            GLOBAL.MapTxt[1].Add("5,5,5,1,1,1,2,2,2,2,2,1,1,1,1,2,2,2,2,2,1,1,1,5,5,5,");
+            GLOBAL.MapTxt[1].Add("1,1,1,1,1,1,1,1,1,1,1,4,4,4,4,1,1,1,1,1,1,1,1,1,1,1,");
+            GLOBAL.MapTxt[1].Add("1,1,1,1,1,1,1,1,1,1,1,4,4,4,4,1,1,1,1,1,1,1,1,1,1,1,");
+            GLOBAL.MapTxt[1].Add("2,2,2,1,1,1,1,1,1,1,5,5,5,5,5,5,1,1,1,1,1,1,2,2,2,2,");
+            GLOBAL.MapTxt[1].Add("2,2,2,1,1,1,1,1,1,1,5,5,5,5,5,5,1,1,1,1,1,1,2,2,2,2,");
+            GLOBAL.MapTxt[1].Add("1,4,4,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,4,4,1,");
+            GLOBAL.MapTxt[1].Add("1,4,4,1,1,1,1,1,1,2,2,1,1,1,1,2,2,1,1,1,1,1,1,4,4,1,");
+            GLOBAL.MapTxt[1].Add("1,4,4,1,1,1,1,1,1,3,2,1,1,1,1,2,3,1,1,1,1,1,1,4,4,1,");
+            GLOBAL.MapTxt[1].Add("1,4,4,1,1,1,1,1,1,3,2,1,1,1,1,2,3,1,1,1,1,1,1,4,4,1,");
+            GLOBAL.MapTxt[1].Add("1,1,1,1,1,1,1,1,1,3,2,1,1,1,1,2,3,1,1,1,1,1,1,1,1,1,");
+            GLOBAL.MapTxt[1].Add("1,1,1,1,1,1,1,1,1,2,2,1,1,1,1,2,2,1,1,1,1,1,1,1,1,1,");
+            GLOBAL.MapTxt[1].Add("3,3,1,1,1,4,4,5,5,1,1,1,1,1,1,1,1,5,5,4,4,1,1,1,3,3,");
+            GLOBAL.MapTxt[1].Add("1,1,1,2,2,4,4,5,5,1,1,1,1,1,1,1,1,5,5,4,4,2,2,1,1,1,");
+            GLOBAL.MapTxt[1].Add("1,1,1,2,2,5,5,1,1,1,1,1,2,2,1,1,1,1,1,5,5,2,2,1,1,1,");
+            GLOBAL.MapTxt[1].Add("1,1,1,2,2,5,5,1,1,1,1,1,2,2,1,1,1,1,1,5,5,2,2,1,1,1,");
+            GLOBAL.MapTxt[1].Add("1,1,1,2,2,5,5,1,1,1,1,1,2,2,1,1,1,1,1,5,5,2,2,1,1,1,");
+            GLOBAL.MapTxt[1].Add("5,5,5,3,3,3,3,1,1,1,1,1,1,1,1,1,1,1,1,3,3,3,3,5,5,5,");
+            GLOBAL.MapTxt[1].Add("5,5,5,3,3,3,3,1,1,5,5,5,5,5,5,5,5,1,1,3,3,3,3,5,5,5,");
+            GLOBAL.MapTxt[1].Add("1,1,1,1,1,1,1,1,1,5,5,5,5,5,5,5,5,1,1,1,1,1,1,1,1,1,");
+            GLOBAL.MapTxt[1].Add("1,1,1,1,1,1,1,1,1,5,5,2,2,2,2,5,5,1,1,1,1,1,1,1,1,1,");
+            GLOBAL.MapTxt[1].Add("1,1,1,2,2,1,1,1,1,5,5,2,1,1,2,5,5,1,1,1,1,2,2,1,1,1,");
+            GLOBAL.MapTxt[1].Add("1,1,1,2,2,1,1,1,1,5,5,2,1,1,2,5,5,1,1,1,1,2,2,1,1,1");
+
+            ///////map 2
+            GLOBAL.MapTxt.Add(new List<string>(0));
+            GLOBAL.MapTxt[2].Add("10");
+            GLOBAL.MapTxt[2].Add("6");
+            GLOBAL.MapTxt[2].Add("2");
+            GLOBAL.MapTxt[2].Add("2");
+            GLOBAL.MapTxt[2].Add("1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,");
+            GLOBAL.MapTxt[2].Add("1,1,2,2,2,2,1,1,1,1,2,2,2,2,2,1,1,1,1,2,2,2,2,1,1,1,");
+            GLOBAL.MapTxt[2].Add("1,1,2,2,2,2,1,1,1,1,2,2,2,2,2,1,1,1,1,2,2,2,2,1,1,1,");
+            GLOBAL.MapTxt[2].Add("1,1,5,5,3,3,1,1,1,1,1,1,1,1,1,1,1,1,1,1,3,3,5,5,1,1,");
+            GLOBAL.MapTxt[2].Add("1,1,5,5,3,3,1,1,3,3,5,5,1,1,5,5,3,3,1,1,3,3,5,5,1,1,");
+            GLOBAL.MapTxt[2].Add("1,1,1,1,1,2,2,2,3,3,5,5,1,1,5,5,3,3,2,2,2,1,1,1,1,1,");
+            GLOBAL.MapTxt[2].Add("5,5,5,5,1,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,1,5,5,5,5,");
+            GLOBAL.MapTxt[2].Add("5,5,5,5,1,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,1,5,5,5,5,");
+            GLOBAL.MapTxt[2].Add("4,4,5,5,1,2,1,1,2,2,1,1,2,2,1,1,2,2,1,1,2,1,5,5,4,4,");
+            GLOBAL.MapTxt[2].Add("4,4,5,5,1,2,1,1,2,2,1,1,2,2,1,1,2,2,1,1,2,1,5,5,4,4,");
+            GLOBAL.MapTxt[2].Add("5,5,5,5,1,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,1,5,5,5,5,");
+            GLOBAL.MapTxt[2].Add("5,5,5,5,1,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,1,5,5,5,5,");
+            GLOBAL.MapTxt[2].Add("1,1,1,1,1,2,2,2,1,1,1,1,1,1,1,1,1,1,2,2,2,1,1,1,1,1,");
+            GLOBAL.MapTxt[2].Add("1,1,1,1,1,1,1,1,1,1,1,5,5,5,5,1,1,1,1,1,1,1,1,1,1,1,");
+            GLOBAL.MapTxt[2].Add("1,1,1,1,1,1,1,1,3,3,1,5,5,5,5,1,3,3,1,1,1,1,1,1,1,1,");
+            GLOBAL.MapTxt[2].Add("1,1,1,1,1,1,1,1,3,3,1,1,1,1,1,1,3,3,1,1,1,1,1,1,1,1,");
+            GLOBAL.MapTxt[2].Add("1,1,1,1,3,3,1,1,1,1,4,4,4,4,4,4,1,1,1,1,3,3,1,1,1,1,");
+            GLOBAL.MapTxt[2].Add("1,1,1,1,3,3,1,1,1,1,4,4,4,4,4,4,1,1,1,1,3,3,1,1,1,1,");
+            GLOBAL.MapTxt[2].Add("1,1,5,5,5,5,1,1,1,1,3,3,3,3,3,3,1,1,1,5,5,5,5,1,1,1,");
+            GLOBAL.MapTxt[2].Add("1,1,2,2,2,2,1,1,1,1,2,2,5,5,2,2,1,1,1,2,2,2,2,1,1,1,");
+            GLOBAL.MapTxt[2].Add("1,1,2,2,2,2,1,1,1,1,2,2,5,5,2,2,1,1,1,2,2,2,2,1,1,1,");
+            GLOBAL.MapTxt[2].Add("1,1,1,1,1,1,1,1,5,5,5,5,5,5,5,5,5,5,1,1,1,1,1,1,1,1,");
+            GLOBAL.MapTxt[2].Add("1,1,1,1,1,1,1,1,5,5,2,2,2,2,2,2,5,5,1,1,1,1,1,1,1,1,");
+            GLOBAL.MapTxt[2].Add("1,1,1,1,1,1,1,1,5,5,2,2,2,2,2,2,5,5,1,1,1,1,1,1,1,1,");
+            GLOBAL.MapTxt[2].Add("1,1,1,1,1,1,1,1,5,5,2,2,1,1,2,2,5,5,1,1,1,1,1,1,1,1,");
+            GLOBAL.MapTxt[2].Add("1,1,1,1,1,1,1,1,5,5,2,2,1,1,2,2,5,5,1,1,1,1,1,1,1,1");
+
+            //// map 3
+            GLOBAL.MapTxt.Add(new List<string>(0));
+            GLOBAL.MapTxt[3].Add("10");
+            GLOBAL.MapTxt[3].Add("6");
+            GLOBAL.MapTxt[3].Add("2");
+            GLOBAL.MapTxt[3].Add("2");
+            GLOBAL.MapTxt[3].Add("1,1,1,5,5,5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,5,5,1,1,1,");
+            GLOBAL.MapTxt[3].Add("1,1,1,5,5,5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,5,5,1,1,1,");
+            GLOBAL.MapTxt[3].Add("1,2,2,1,1,1,1,1,1,4,4,2,2,2,2,4,4,1,1,1,1,1,1,2,2,1,");
+            GLOBAL.MapTxt[3].Add("2,2,3,1,1,1,2,2,2,4,4,2,2,2,2,4,4,2,2,2,1,1,1,3,2,2,");
+            GLOBAL.MapTxt[3].Add("1,1,1,1,1,1,2,2,1,1,1,1,2,2,1,1,1,1,2,2,1,1,1,1,1,1,");
+            GLOBAL.MapTxt[3].Add("1,1,1,1,1,1,2,2,1,1,1,1,2,2,1,1,1,1,2,2,1,1,1,1,1,1,");
+            GLOBAL.MapTxt[3].Add("1,1,1,1,1,1,2,2,1,1,1,1,3,3,1,1,1,1,2,2,1,1,1,1,1,1,");
+            GLOBAL.MapTxt[3].Add("1,1,1,3,3,1,2,2,2,1,1,1,3,3,1,1,1,2,2,2,1,3,3,1,1,1,");
+            GLOBAL.MapTxt[3].Add("5,5,5,3,3,1,1,1,5,5,5,1,1,1,1,5,5,5,1,1,1,3,3,5,5,5,");
+            GLOBAL.MapTxt[3].Add("2,2,2,5,1,1,1,1,5,5,5,1,1,1,1,5,5,5,1,1,1,1,5,2,2,2,");
+            GLOBAL.MapTxt[3].Add("5,2,2,5,1,1,1,1,1,1,1,1,2,2,1,1,1,1,1,1,1,1,5,2,2,5,");
+            GLOBAL.MapTxt[3].Add("5,2,2,5,1,1,1,1,1,1,1,2,2,2,2,1,1,1,1,1,1,1,5,2,2,5,");
+            GLOBAL.MapTxt[3].Add("5,2,2,5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,2,2,5,");
+            GLOBAL.MapTxt[3].Add("2,2,2,5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,2,2,2,");
+            GLOBAL.MapTxt[3].Add("5,5,5,3,3,1,1,1,1,1,1,5,5,5,5,5,1,1,1,1,1,3,3,5,5,5,");
+            GLOBAL.MapTxt[3].Add("1,1,1,3,3,1,1,1,1,1,1,5,5,5,5,5,1,1,1,1,1,3,3,1,1,1,");
+            GLOBAL.MapTxt[3].Add("1,1,1,1,1,1,1,1,2,2,2,4,4,4,4,4,2,2,2,1,1,1,1,1,1,1,");
+            GLOBAL.MapTxt[3].Add("1,3,3,3,1,1,1,1,2,2,2,4,4,4,4,4,2,2,2,1,1,1,3,3,3,1,");
+            GLOBAL.MapTxt[3].Add("3,3,1,1,1,1,1,1,2,2,2,4,4,4,4,4,2,2,2,1,1,1,1,1,3,3,");
+            GLOBAL.MapTxt[3].Add("1,1,1,1,1,1,1,1,1,1,1,5,5,5,5,5,1,1,1,1,1,1,1,1,1,1,");
+            GLOBAL.MapTxt[3].Add("1,2,2,1,2,2,1,1,1,1,1,5,5,5,5,5,1,1,1,1,2,2,1,2,2,1,");
+            GLOBAL.MapTxt[3].Add("2,2,1,1,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,1,1,2,2,");
+            GLOBAL.MapTxt[3].Add("1,1,1,1,2,2,1,1,1,2,2,2,2,2,2,2,2,1,1,1,2,2,1,1,1,1,");
+            GLOBAL.MapTxt[3].Add("5,5,1,1,2,2,1,1,1,5,4,2,2,2,2,5,4,1,1,1,2,2,1,1,5,5,");
+            GLOBAL.MapTxt[3].Add("5,5,1,1,2,2,1,1,1,5,4,2,1,1,2,5,4,1,1,1,2,2,1,1,5,5,");
+            GLOBAL.MapTxt[3].Add("5,5,1,1,2,2,1,1,1,5,4,2,1,1,2,5,1,1,1,1,2,2,1,1,5,5");
+
+#endregion
+            
+            menu = new GameMenu(this);
+            menu.Enabled = true;
+            this.Components.Add(menu);
+
+            #region lvl
+            lvl = new GamePlay(this,1);
+            this.Components.Add(lvl);
+            #endregion
+
+
+            #region gameover
+            gameover = new GameOver(this);
+            this.Components.Add(gameover);
+            #endregion
+
+#region SelectMap
+            GLOBAL.SelectMapMenuBG = Content.Load<Texture2D>(@"GameMenu/SelectMapMenuBG");
+            GLOBAL.BtnMapDown = Content.Load<Texture2D>(@"GameMenu/BtnMapDown");
+            GLOBAL.BtnMapUp = Content.Load<Texture2D>(@"GameMenu/BtnMapUp");
+            GLOBAL.BtnMapLock = Content.Load<Texture2D>(@"GameMenu/BtnMapLock");
+            _SelectMapMenu = new SelectMapMenu(this);
+            this.Components.Add(_SelectMapMenu);
+            
+#endregion
+            base.Initialize();
+        }
+        /// <summary>
+        /// LoadContent will be called once per game and is the place to load
+        /// all of your content.
+        /// </summary>
+        protected override void LoadContent()
+        {
+            // Create a new SpriteBatch, which can be used to draw textures.
+            spriteBatch = new SpriteBatch(GraphicsDevice);
+
+            GLOBAL.Bullet = new List<bullet>();
+            GLOBAL.explosionGach = new List<MySprite2D>();
+            GLOBAL.explosionTank = new List<MySprite2D>();
+            GLOBAL.explosionBullet = new List<MySprite2D>();
+            GLOBAL.Fire = new List<MySprite2D>();
+            //GLOBAL.gamedata = new GameData();
+            //GLOBAL.gamedata.maxlevel = 1;
+            //GLOBAL.gamedata.livepoint = new List<int>();
+            //GLOBAL.gamedata.livepoint.Add(3);
+
+
+            //GLOBAL.MapTxt.Add(new List<string>);
+            
+
+            // TODO: use this.Content to load your game content here
+        }
+
+        /// <summary>
+        /// UnloadContent will be called once per game and is the place to unload
+        /// all content.
+        /// </summary>
+        protected override void UnloadContent()
+        {
+            // TODO: Unload any non ContentManager content here
+            this.Content.Unload();
+        }
+
+        /// <summary>
+        /// Allows the game to run logic such as updating the world,
+        /// checking for collisions, gathering input, and playing audio.
+        /// </summary>
+        /// <param name="gameTime">Provides a snapshot of timing values.</param>
+        protected override void Update(GameTime gameTime)
+        {
+            // Allows the game to exit
+            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
+                this.Exit();
+            //if (MediaPlayer.State == MediaState.Stopped)
+            //{
+            //    MediaPlayer.Play(Global.nhacnenGame);
+            //}
+            if (menu.NewGameClick == true)
+            {
+               
+                this.gType = GameType.selectmap;
+                menu.NewGameClick = false;
+                GLOBAL.GameOver = false;
+                
+            }
+            if (_SelectMapMenu.btn_click == true)
+            {
+
+                this.gType = GameType.Level1;
+                _SelectMapMenu.btn_click = true;
+                GLOBAL.XeLivePoint = GLOBAL.gamedata.livepoint[_SelectMapMenu.selectedButton];
+                this.Components.Remove(lvl);                
+                lvl = new GamePlay(this, _SelectMapMenu.selectedButton+1);
+                this.Components.Add(lvl);
+                _SelectMapMenu.btn_click = false;
+
+
+            }
+            if (gameover.btn_Replay_click == true)
+            {
+                GLOBAL.LoadGame();
+                this.gType = GameType.Level1;
+                gameover.btn_Replay_click = false;
+                gameover.Enabled = false;
+                gameover.Visible = false;
+                this.Components.Remove(lvl);
+                lvl = new GamePlay(this,lvl.Level);
+                if (lvl.Level == 1) GLOBAL.XeLivePoint = 3;
+                else
+                    GLOBAL.XeLivePoint = GLOBAL.gamedata.livepoint[lvl.Level - 2];
+                this.Components.Add(lvl);
+                GLOBAL.GameOver = false;
+            }
+            switch (gType)
+            {
+                case GameType.gamenu:
+                    {
+                        lvl.Visible = false;
+                        lvl.Enabled = false;
+                        //co = 0;
+
+                        menu.Enabled = true;
+                        menu.Visible = true;
+                        break;
+                    }
+                case GameType.selectmap:
+                    {
+                        menu.Enabled = false;
+                        menu.Visible = false;
+
+                        //lvl.Visible = false;
+                        //lvl.Enabled = false;
+                        //co = 0;
+
+                        gameover.Enabled = false;
+                        gameover.Visible = false;
+                        _SelectMapMenu.Enabled = true;
+                        _SelectMapMenu.Visible = true;
+                       
+                        break;
+                    }
+                case GameType.Level1:
+                    {
+                        //this.UnloadContent();
+                        menu.Visible = false;
+                        menu.Enabled = false;
+                        _SelectMapMenu.Enabled = false;
+                        _SelectMapMenu.Visible = false;
+                        if (GLOBAL.GameOver == false)
+                        {
+                            lvl.Enabled = true;
+                            lvl.Visible = true;
+                        }
+                        else
+                        {
+                            lvl.Enabled = false;
+                            lvl.Visible = false;
+                            gameover.Enabled = true;
+                            gameover.Visible = true;
+                        }
+                        if (GLOBAL.Win == true)
+                        {
+                            GLOBAL.XeLivePoint=GLOBAL.xe.livepoint;
+                            this.Components.Remove(lvl);                            
+                            lvl = new GamePlay(this, lvl.Level + 1);
+                            this.Components.Add(lvl);
+                            GLOBAL.Win = false;
+                            GLOBAL.SaveGame();
+                        }
+
+                        break;
+                    }
+            }
+            // TODO: Add your update logic here
+            for (int i = 0; i < GLOBAL.Bullet.Count; i++)
+                GLOBAL.Bullet[i].update(gameTime);
+
+    
+            base.Update(gameTime);
+        }
+
+        /// <summary>
+        /// This is called when the game should draw itself.
+        /// </summary>
+        /// <param name="gameTime">Provides a snapshot of timing values.</param>
+        protected override void Draw(GameTime gameTime)
+        {
+            GraphicsDevice.Clear(Color.CornflowerBlue);
+
+            // TODO: Add your drawing code here
+      
+               
+            
+            base.Draw(gameTime);
+        }
+    }
+}

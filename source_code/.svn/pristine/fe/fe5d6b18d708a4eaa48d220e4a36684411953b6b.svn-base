@@ -1,0 +1,452 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>sprf.spritefont</Source>
+      <Name>sprf</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bui\Desktop\code google\TankWar\TankWar\bin\x86\Debug\Content\sprf.xnb</Output>
+      <Time>2014-06-04T17:34:28.2580691+07:00</Time>
+    </Item>
+    <Item>
+      <Source>GameMenu\btnExit.png</Source>
+      <Name>GameMenu\btnExit</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bui\Desktop\code google\TankWar\TankWar\bin\x86\Debug\Content\GameMenu\btnExit.xnb</Output>
+      <Time>2014-05-28T13:58:49.5974561+07:00</Time>
+    </Item>
+    <Item>
+      <Source>GameMenu\btnExit1.png</Source>
+      <Name>GameMenu\btnExit1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bui\Desktop\code google\TankWar\TankWar\bin\x86\Debug\Content\GameMenu\btnExit1.xnb</Output>
+      <Time>2014-05-28T13:58:49.4304453+07:00</Time>
+    </Item>
+    <Item>
+      <Source>GameMenu\btnLoad.png</Source>
+      <Name>GameMenu\btnLoad</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bui\Desktop\code google\TankWar\TankWar\bin\x86\Debug\Content\GameMenu\btnLoad.xnb</Output>
+      <Time>2014-05-28T13:58:49.6414586+07:00</Time>
+    </Item>
+    <Item>
+      <Source>GameMenu\btnLoad1.png</Source>
+      <Name>GameMenu\btnLoad1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bui\Desktop\code google\TankWar\TankWar\bin\x86\Debug\Content\GameMenu\btnLoad1.xnb</Output>
+      <Time>2014-05-28T13:58:49.5494542+07:00</Time>
+    </Item>
+    <Item>
+      <Source>GameMenu\btnOpotion.png</Source>
+      <Name>GameMenu\btnOpotion</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bui\Desktop\code google\TankWar\TankWar\bin\x86\Debug\Content\GameMenu\btnOpotion.xnb</Output>
+      <Time>2014-05-28T13:58:49.7814665+07:00</Time>
+    </Item>
+    <Item>
+      <Source>GameMenu\btnOpotion1.png</Source>
+      <Name>GameMenu\btnOpotion1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bui\Desktop\code google\TankWar\TankWar\bin\x86\Debug\Content\GameMenu\btnOpotion1.xnb</Output>
+      <Time>2014-05-28T13:58:49.5814541+07:00</Time>
+    </Item>
+    <Item>
+      <Source>GameMenu\btnPlay.png</Source>
+      <Name>GameMenu\btnPlay</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bui\Desktop\code google\TankWar\TankWar\bin\x86\Debug\Content\GameMenu\btnPlay.xnb</Output>
+      <Time>2014-05-28T13:58:49.5544537+07:00</Time>
+    </Item>
+    <Item>
+      <Source>GameMenu\btnPlay1.png</Source>
+      <Name>GameMenu\btnPlay1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bui\Desktop\code google\TankWar\TankWar\bin\x86\Debug\Content\GameMenu\btnPlay1.xnb</Output>
+      <Time>2014-05-28T13:58:49.7774666+07:00</Time>
+    </Item>
+    <Item>
+      <Source>GameMenu\btnScore.png</Source>
+      <Name>GameMenu\btnScore</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bui\Desktop\code google\TankWar\TankWar\bin\x86\Debug\Content\GameMenu\btnScore.xnb</Output>
+      <Time>2014-05-28T13:58:49.6014575+07:00</Time>
+    </Item>
+    <Item>
+      <Source>GameMenu\btnScore1.png</Source>
+      <Name>GameMenu\btnScore1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bui\Desktop\code google\TankWar\TankWar\bin\x86\Debug\Content\GameMenu\btnScore1.xnb</Output>
+      <Time>2014-05-28T13:58:49.5454523+07:00</Time>
+    </Item>
+    <Item>
+      <Source>GameMenu\menubackground.jpg</Source>
+      <Name>GameMenu\menubackground</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bui\Desktop\code google\TankWar\TankWar\bin\x86\Debug\Content\GameMenu\menubackground.xnb</Output>
+      <Time>2014-05-28T13:58:49.5384533+07:00</Time>
+    </Item>
+    <Item>
+      <Source>GameMenu\menubackground5.jpg</Source>
+      <Name>GameMenu\menubackground5</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bui\Desktop\code google\TankWar\TankWar\bin\x86\Debug\Content\GameMenu\menubackground5.xnb</Output>
+      <Time>2014-05-28T13:58:49.6474584+07:00</Time>
+    </Item>
+    <Item>
+      <Source>GameMenu\MenuTable.png</Source>
+      <Name>GameMenu\MenuTable</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bui\Desktop\code google\TankWar\TankWar\bin\x86\Debug\Content\GameMenu\MenuTable.xnb</Output>
+      <Time>2014-05-28T13:58:49.5924565+07:00</Time>
+    </Item>
+    <Item>
+      <Source>GameMenu\MenuTable2.png</Source>
+      <Name>GameMenu\MenuTable2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bui\Desktop\code google\TankWar\TankWar\bin\x86\Debug\Content\GameMenu\MenuTable2.xnb</Output>
+      <Time>2014-05-28T13:58:49.4424464+07:00</Time>
+    </Item>
+    <Item>
+      <Source>GameMenu\MenuTable3.png</Source>
+      <Name>GameMenu\MenuTable3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bui\Desktop\code google\TankWar\TankWar\bin\x86\Debug\Content\GameMenu\MenuTable3.xnb</Output>
+      <Time>2014-05-28T13:58:49.5314522+07:00</Time>
+    </Item>
+    <Item>
+      <Source>GameMenu\TitleGame.png</Source>
+      <Name>GameMenu\TitleGame</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bui\Desktop\code google\TankWar\TankWar\bin\x86\Debug\Content\GameMenu\TitleGame.xnb</Output>
+      <Time>2014-05-28T13:58:49.5754543+07:00</Time>
+    </Item>
+    <Item>
+      <Source>GameMenu\TitleGame2.png</Source>
+      <Name>GameMenu\TitleGame2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bui\Desktop\code google\TankWar\TankWar\bin\x86\Debug\Content\GameMenu\TitleGame2.xnb</Output>
+      <Time>2014-05-28T13:58:49.426445+07:00</Time>
+    </Item>
+    <Item>
+      <Source>GamePlay\background.jpg</Source>
+      <Name>GamePlay\background</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bui\Desktop\code google\TankWar\TankWar\bin\x86\Debug\Content\GamePlay\background.xnb</Output>
+      <Time>2014-05-28T13:58:28.4427909+07:00</Time>
+    </Item>
+    <Item>
+      <Source>GamePlay\buicay.png</Source>
+      <Name>GamePlay\buicay</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bui\Desktop\code google\TankWar\TankWar\bin\x86\Debug\Content\GamePlay\buicay.xnb</Output>
+      <Time>2014-06-04T14:16:36.8308885+07:00</Time>
+    </Item>
+    <Item>
+      <Source>GamePlay\bullet.png</Source>
+      <Name>GamePlay\bullet</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bui\Desktop\code google\TankWar\TankWar\bin\x86\Debug\Content\GamePlay\bullet.xnb</Output>
+      <Time>2014-06-01T03:08:55.1415809+07:00</Time>
+    </Item>
+    <Item>
+      <Source>GamePlay\tank0.png</Source>
+      <Name>GamePlay\tank0</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bui\Desktop\code google\TankWar\TankWar\bin\x86\Debug\Content\GamePlay\tank0.xnb</Output>
+      <Time>2014-06-02T08:44:45.5739442+07:00</Time>
+    </Item>
+    <Item>
+      <Source>GamePlay\tank30.png</Source>
+      <Name>GamePlay\tank30</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bui\Desktop\code google\TankWar\TankWar\bin\x86\Debug\Content\GamePlay\tank30.xnb</Output>
+      <Time>2014-05-28T13:58:28.3172766+07:00</Time>
+    </Item>
+    <Item>
+      <Source>GamePlay\TuongGach.png</Source>
+      <Name>GamePlay\TuongGach</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bui\Desktop\code google\TankWar\TankWar\bin\x86\Debug\Content\GamePlay\TuongGach.xnb</Output>
+      <Time>2014-06-04T11:08:40.7058836+07:00</Time>
+    </Item>
+    <Item>
+      <Source>GamePlay\wall.png</Source>
+      <Name>GamePlay\wall</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bui\Desktop\code google\TankWar\TankWar\bin\x86\Debug\Content\GamePlay\wall.xnb</Output>
+      <Time>2014-06-04T10:12:43.1849744+07:00</Time>
+    </Item>
+    <Item>
+      <Source>GameMenu\changeButton.wav</Source>
+      <Name>GameMenu\changeButton</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bui\Desktop\code google\TankWar\TankWar\bin\x86\Debug\Content\GameMenu\changeButton.xnb</Output>
+      <Time>2014-05-28T13:58:49.772466+07:00</Time>
+    </Item>
+    <Item>
+      <Source>GameMenu\changeButton2.wav</Source>
+      <Name>GameMenu\changeButton2</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bui\Desktop\code google\TankWar\TankWar\bin\x86\Debug\Content\GameMenu\changeButton2.xnb</Output>
+      <Time>2014-05-28T13:58:49.5854549+07:00</Time>
+    </Item>
+    <Item>
+      <Source>GameMenu\entergamesound.wav</Source>
+      <Name>GameMenu\entergamesound</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bui\Desktop\code google\TankWar\TankWar\bin\x86\Debug\Content\GameMenu\entergamesound.xnb</Output>
+      <Time>2014-05-28T13:58:49.6534582+07:00</Time>
+    </Item>
+    <Item>
+      <Source>GameMenu\menutablesound.wav</Source>
+      <Name>GameMenu\menutablesound</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bui\Desktop\code google\TankWar\TankWar\bin\x86\Debug\Content\GameMenu\menutablesound.xnb</Output>
+      <Time>2014-05-28T13:58:49.4344457+07:00</Time>
+    </Item>
+    <Item>
+      <Source>GameMenu\Menutablesound2.wav</Source>
+      <Name>GameMenu\Menutablesound2</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bui\Desktop\code google\TankWar\TankWar\bin\x86\Debug\Content\GameMenu\Menutablesound2.xnb</Output>
+      <Time>2014-05-28T13:58:49.6104589+07:00</Time>
+    </Item>
+    <Item>
+      <Source>GameMenu\Menutablesound3.wav</Source>
+      <Name>GameMenu\Menutablesound3</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bui\Desktop\code google\TankWar\TankWar\bin\x86\Debug\Content\GameMenu\Menutablesound3.xnb</Output>
+      <Time>2014-05-28T13:58:49.6164582+07:00</Time>
+    </Item>
+    <Item>
+      <Source>GameMenu\NhacNenMenu.mp3</Source>
+      <Name>GameMenu\NhacNenMenu</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bui\Desktop\code google\TankWar\TankWar\bin\x86\Debug\Content\GameMenu\NhacNenMenu.xnb</Output>
+      <Extra>C:\Users\Bui\Desktop\code google\TankWar\TankWar\bin\x86\Debug\Content\GameMenu\NhacNenMenu.wma</Extra>
+      <Time>2014-05-28T13:58:49.5704547+07:00</Time>
+    </Item>
+    <Item>
+      <Source>GamePlay\tank1.png</Source>
+      <Name>GamePlay\tank1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bui\Desktop\code google\TankWar\TankWar\bin\x86\Debug\Content\GamePlay\tank1.xnb</Output>
+      <Time>2014-06-02T08:39:35.8417678+07:00</Time>
+    </Item>
+    <Item>
+      <Source>GamePlay\protect.png</Source>
+      <Name>GamePlay\protect</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bui\Desktop\code google\TankWar\TankWar\bin\x86\Debug\Content\GamePlay\protect.xnb</Output>
+      <Time>2014-05-28T16:45:28.5269071+07:00</Time>
+    </Item>
+    <Item>
+      <Source>GameMenu\GameOverBG.jpg</Source>
+      <Name>GameMenu\GameOverBG</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bui\Desktop\code google\TankWar\TankWar\bin\x86\Debug\Content\GameMenu\GameOverBG.xnb</Output>
+      <Time>2014-05-31T01:53:11.227524+07:00</Time>
+    </Item>
+    <Item>
+      <Source>GamePlay\tank2.png</Source>
+      <Name>GamePlay\tank2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bui\Desktop\code google\TankWar\TankWar\bin\x86\Debug\Content\GamePlay\tank2.xnb</Output>
+      <Time>2014-06-02T08:47:48.9498787+07:00</Time>
+    </Item>
+    <Item>
+      <Source>GamePlay\tank3.png</Source>
+      <Name>GamePlay\tank3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bui\Desktop\code google\TankWar\TankWar\bin\x86\Debug\Content\GamePlay\tank3.xnb</Output>
+      <Time>2014-06-03T06:37:47.8153624+07:00</Time>
+    </Item>
+    <Item>
+      <Source>GamePlay\tank4.png</Source>
+      <Name>GamePlay\tank4</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bui\Desktop\code google\TankWar\TankWar\bin\x86\Debug\Content\GamePlay\tank4.xnb</Output>
+      <Time>2014-06-03T07:31:08.6660359+07:00</Time>
+    </Item>
+    <Item>
+      <Source>GamePlay\bg.png</Source>
+      <Name>GamePlay\bg</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bui\Desktop\code google\TankWar\TankWar\bin\x86\Debug\Content\GamePlay\bg.xnb</Output>
+      <Time>2014-06-04T14:07:58.6125189+07:00</Time>
+    </Item>
+    <Item>
+      <Source>GameMenu\sidebackground.png</Source>
+      <Name>GameMenu\sidebackground</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bui\Desktop\code google\TankWar\TankWar\bin\x86\Debug\Content\GameMenu\sidebackground.xnb</Output>
+      <Time>2014-06-04T17:37:42.4825041+07:00</Time>
+    </Item>
+    <Item>
+      <Source>font2.spritefont</Source>
+      <Name>font2</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bui\Desktop\code google\TankWar\TankWar\bin\x86\Debug\Content\font2.xnb</Output>
+      <Time>2014-06-04T17:42:51.4981462+07:00</Time>
+    </Item>
+    <Item>
+      <Source>GamePlay\ExplosionGach.png</Source>
+      <Name>GamePlay\ExplosionGach</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bui\Desktop\code google\TankWar\TankWar\bin\x86\Debug\Content\GamePlay\ExplosionGach.xnb</Output>
+      <Time>2014-06-04T19:47:35.9667115+07:00</Time>
+    </Item>
+    <Item>
+      <Source>GamePlay\ExplosionTank.png</Source>
+      <Name>GamePlay\ExplosionTank</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bui\Desktop\code google\TankWar\TankWar\bin\x86\Debug\Content\GamePlay\ExplosionTank.xnb</Output>
+      <Time>2014-06-04T21:05:50.8116467+07:00</Time>
+    </Item>
+    <Item>
+      <Source>GamePlay\vachamBullet.png</Source>
+      <Name>GamePlay\vachamBullet</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bui\Desktop\code google\TankWar\TankWar\bin\x86\Debug\Content\GamePlay\vachamBullet.xnb</Output>
+      <Time>2014-06-04T22:13:51.4517064+07:00</Time>
+    </Item>
+    <Item>
+      <Source>GamePlay\fire.png</Source>
+      <Name>GamePlay\fire</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Bui\Desktop\code google\TankWar\TankWar\bin\x86\Debug\Content\GamePlay\fire.xnb</Output>
+      <Time>2014-06-04T22:58:20.486108+07:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <TargetPlatform>Windows</TargetPlatform>
+      <TargetProfile>HiDef</TargetProfile>
+      <BuildConfiguration>Debug</BuildConfiguration>
+      <CompressContent>false</CompressContent>
+      <RootDirectory>C:\Users\Bui\Desktop\code google\TankWar\TankWarContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Bui\Desktop\code google\TankWar\TankWar\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Bui\Desktop\code google\TankWar\TankWarContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Bui\Desktop\code google\TankWar\TankWar\bin\x86\Debug\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2010-08-23T12:41:18+07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2010-08-23T12:41:18+07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2010-08-23T12:41:18+07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2010-08-23T12:41:18+07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2010-08-23T12:41:18+07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2010-08-23T12:41:18+07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2014-02-27T00:06:27.8422065+07:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>

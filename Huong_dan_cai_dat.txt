@@ -1,0 +1,2 @@
+﻿Bước 1: Chạy file xnafx40_redist.msi và cài đặt theo hướng dẫn.
+Bước 2: Vào thư mục Tank_VN và chạy file Tank_War.exe và trãi nghiệm những thú vị cùng game nào!
